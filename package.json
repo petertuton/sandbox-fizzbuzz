@@ -1,0 +1,22 @@
+{
+  "name": "sandbox-fizzbuzz",
+  "version": "1.0.0",
+  "description": "REST API to calculate FizzBuzz value for a given range",
+  "main": "server.js",
+  "scripts": {
+    "test": "node_modules/.bin/mocha"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ptuton/sandbox-fizzbuzz.git"
+  },
+  "author": "Peter Tuton",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ptuton/sandbox-fizzbuzz/issues"
+  },
+  "homepage": "https://github.com/ptuton/sandbox-fizzbuzz#readme",
+  "devDependencies": {
+    "mocha": "^2.4.5"
+  }
+}
