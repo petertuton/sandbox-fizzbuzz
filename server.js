@@ -3,6 +3,10 @@ var app = express();
 
 var FizzBuzz = require("./fizzbuzz");
 
+app.get("/", function() {
+  res.send("Modify the URL to include the function and the parameters, e.g. http://sandbox-fizzbuzz.au-syd.mybluemix.net/fizzbuzz_range/:from/:to");
+});
+
 app.get("/fizzbuzz_range/:from/:to", function(req, res) {
   var fizzbuzz = new FizzBuzz();
   var from = req.params.from;
