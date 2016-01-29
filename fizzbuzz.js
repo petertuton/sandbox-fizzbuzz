@@ -6,14 +6,14 @@ FizzBuzz.prototype.divisibleBy = function(number, divisor) {
 };
 
 FizzBuzz.prototype.convertToFizzBuzz = function(number) {
+  if (this.divisibleBy(number, 15)) {
+    return "FizzBuzz";
+  }
   if (this.divisibleBy(number, 3)) {
     return "Fizz";
   }
   if (this.divisibleBy(number, 5)) {
     return "Buzz";
-  }
-  if (this.divisibleBy(number, 15)) {
-    return "FizzBuzz";
   }
   return number.toString();
 };
