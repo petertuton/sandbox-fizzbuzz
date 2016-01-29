@@ -20,8 +20,10 @@ FizzBuzz.prototype.convertToFizzBuzz = function(number) {
 
 FizzBuzz.prototype.convertRangeToFizzBuzz = function(start, end) {
   var result = [];
+  var from = parseInt(start);
+  var to = parseInt(end);
 
-  for (var i = start; i <= end; i++) {
+  for (var i = from; i <= to; i++) {
     result.push(this.convertToFizzBuzz(i));
   }
 
