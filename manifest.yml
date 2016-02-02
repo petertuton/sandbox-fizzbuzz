@@ -1,2 +1,7 @@
+declared-services:
+  sandbox-fizzbuzz-cloudant:
+    label: cloudantNoSQLDB
+    plan: Shared
 applications:
-  - name: sandbox-fizzbuzz
+- name: sandbox-fizzbuzz
+  services: sandbox-fizzbuzz-cloudant
