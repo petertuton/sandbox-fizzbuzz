@@ -14,7 +14,7 @@ describe("FizzBuzz", function() {
     });
   });
 
-  describe("convertToFizzBuzz", function() {
+  describe("convertToFizzBuzz()", function() {
     it("when divisible by 3", function() {
       expect(f.convertToFizzBuzz(3)).to.be.eql("Fizz");
       expect(f.convertToFizzBuzz(6)).to.be.eql("Fizz");

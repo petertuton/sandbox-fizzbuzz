@@ -77,7 +77,7 @@ describe("processDBResult()", function() {
     function() {
       var storeResultsSpy = sinon.spy(f, "_dbStoreCalculatedResult");
       f._processDBResult(false, DBResult1, "1", "20", cbFunction);
-      expect(cbFunction.withArgs(testResult1).calledOnce).to.be .eql(true, "Expected processDBResult to parse DB return");
+      expect(cbFunction.withArgs(testResult1).calledOnce).to.be.eql(true, "Expected processDBResult to parse DB return");
       expect(fizzBuzzSpy).callCount(0);
       expect(storeResultsSpy).callCount(0);
       f._dbStoreCalculatedResult.restore();
@@ -86,18 +86,18 @@ describe("processDBResult()", function() {
   it("calculates the results when no results found then saves to DB",
     function() {
       storeResultsStub = sinon.stub(f, "_dbStoreCalculatedResult"); f._processDBResult(false, DBResult2, "2", "21", cbFunction);
-      expect(cbFunction.withArgs(testResult2).calledOnce).to.be .eql(true,"Expected calculated result when no data from DB");
-      expect(fizzBuzzSpy.withArgs("2", "21").calledOnce).to.be .eql(true, "convertRangeToFizzBuzz should be called to calculate results");
+      expect(cbFunction.withArgs(testResult2).calledOnce).to.be.eql(true,"Expected calculated result when no data from DB");
+      expect(fizzBuzzSpy.withArgs("2", "21").calledOnce).to.be.eql(true, "convertRangeToFizzBuzz should be called to calculate results");
       expect(storeResultsStub.withArgs(testResult2).calledOnce).to.be.eql(true, "Expect calculated restuls to be stored in DB");
       f._dbStoreCalculatedResult.restore();
     });
 
-  it("calculates results when DB error,but doesn't store results",
+  it("calculates results when DB error, but doesn't store results",
     function() {
       storeResultsSpy = sinon.spy(f, "_dbStoreCalculatedResult");
       f._processDBResult(true, DBResult1, "1", "20", cbFunction);
       expect(cbFunction.withArgs(testResult1).calledOnce).to.be.eql(true, "Expected processDBResult create empty result with DB error");
-      expect(fizzBuzzSpy.withArgs("1", "20").calledOnce).to.be .eql(true, "convertRangeToFizzBuzz should be called to calculate results");
+      expect(fizzBuzzSpy.withArgs("1", "20").calledOnce).to.be.eql(true, "convertRangeToFizzBuzz should be called to calculate results");
       expect(storeResultsSpy).callCount(0);
       f._dbStoreCalculatedResult.restore();
     });
