@@ -1,2 +1,4 @@
 applications:
 - name: sandbox-fizzbuzz
+  services:
+    - sandbox-fizzbuzz-cloudant
