@@ -19,7 +19,8 @@ CacheFizzBuzz.prototype.fizzBuzzRange = function(start, end, callback) {
   });
 };
 
-CacheFizzBuzz.prototype._dbStoreCalculatedResult = function(data) { this._Cloudant.insert(data);
+CacheFizzBuzz.prototype._dbStoreCalculatedResult = function(data) {
+  this._Cloudant.insert(data);
 };
 
 CacheFizzBuzz.prototype._processDBResult = function(err, body, start, end, callback) {
@@ -29,7 +30,8 @@ CacheFizzBuzz.prototype._processDBResult = function(err, body, start, end, callb
     delete body.rows[0].doc._id;
     delete body.rows[0].doc._rev;
     data = body.rows[0].doc;
-  } else {
+  }
+  else {
     data = {
       "from" : start,
       "to" : end,

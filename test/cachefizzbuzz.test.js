@@ -49,7 +49,6 @@ describe("CacheFizzbuzz", function() {
 
 describe("fizzBuzzRange()", function() {
   var cbFunction = function(data) {
-
   };
   it("calls Cloudant to get record from the fb/range view in DB",
     function() {
