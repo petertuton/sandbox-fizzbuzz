@@ -1,2 +1,2 @@
 applications:
-  name: sandbox-fizzbuzz
+- name: sandbox-fizzbuzz
