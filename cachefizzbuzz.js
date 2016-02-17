@@ -10,11 +10,11 @@ module.exports = CacheFizzBuzz;
 
 CacheFizzBuzz.prototype.fizzBuzzRange = function(start, end, callback) {
   var self = this;
-  var parms = {
+  var params = {
       key : [ start, end ],
       include_docs : true
   };
-  self._Cloudant.view('fb', 'range', parms, function(err, body) {
+  self._Cloudant.view('fb', 'range', params, function(err, body) {
     self._processDBResult(err, body, start, end, callback);
   });
 };
